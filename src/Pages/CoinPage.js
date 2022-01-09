@@ -18,10 +18,11 @@ const CoinPage = () => {
       const { data } = await axios.get(SingleCoin(id));
       setCoin(data); 
     }
-    console.log(coin);
+    // console.log(coin);
+    const currency = 'krw';
     useEffect(() => {
         fetchSingle();
-    }, []);
+    }, [currency]);
 
     const useStyles = makeStyles((theme) => ({
         container: {
